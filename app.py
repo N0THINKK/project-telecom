@@ -1,22 +1,26 @@
-from flask import flask, render_template, request
+from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-app = flask(__name__)
+app = Flask(__name__)
 
-model = pickle.load(open("()"))
+model = pickle.load(open("C:\xampp\htdocs\project-telekom\randomforest.pkl", "rb"))
 
-@app route('/predict'. methods = ['POST'])
+@app.route('/')
+def main():
+    return render_template('home.html')
+
+@app.route('/predict', methods = ['POST'])
 def home():
     tenure = request.form['a']
-    PS = request.form['a']
-    C = request.form['a']
-    PB = request.form['a']
-    PM = request.form['a']
-    MC = request.form['a']
+    PS = request.form['b']
+    C = request.form['c']
+    PB = request.form['d']
+    PM = request.form['e']
+    MC = request.form['f']
     array = np.array([(tenure, PS, C,PB, PM, MC)])
     pred = model.predict(array)
     return render_template("hasil.html", data = pred)
 
-if__name__ == "__main__";
-app.run(debug = True)
+if __name__ == "__main__":
+    app.run(debug = True)

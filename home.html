@@ -29,19 +29,20 @@
                   <div class="">
                     <div class="card-body" style="background-color: rgb(96, 93, 93);">
                         
-                          <h1 style="text-align: center;"> Customer Churn Prediction</h1><br>
-
-                          <form method="POST" action="{{url_for('home')}}">
-                            <b style="text-align: left;">
-                              Tenure of the Customer: <input type="text", name="a", placeholder="enter a value"/><br><br>
-                              Phone Service: <input type="text", name="a", placeholder="enter a value"/><br><br>
-                              Contract: <input type="text", name="a", placeholder="enter a value"/><br><br>
-                              Paperless Billin: <input type="text", name="a", placeholder="enter a value"/><br><br>
-                              Monthly Charges: <input type="text", name="a", placeholder="enter a value"/><br><br>
+                          <h1 style="text-align: center; color: aliceblue;"> Customer Churn Prediction</h1><br>
+                        <center>
+                          <form method="POST" action="{{url_for('hasil')}}">
+                            <b style="text-align: left; color: aliceblue;">
+                              Tenure of the Customer:<br> <input type="text", name="a", placeholder="enter a value"/><br>
+                              Phone Service:<br> <input type="text", name="b", placeholder="enter a value"/><br>
+                              Contract:<br> <input type="text", name="c", placeholder="enter a value"/><br>
+                              Paperless Billin:<br> <input type="text", name="d", placeholder="enter a value"/><br>
+                              Payment Method:<br> <input type="text", name="e", placeholder="enter a value"/><br>
+                              Monthly Charges:<br> <input type="text", name="f", placeholder="enter a value"/><br><br>
                               <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
                             </b>
                           </form>
-
+                        </center>
                         
                     </div>
                   </div>
